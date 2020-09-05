@@ -21,8 +21,13 @@
    </head>
    
    <body>
+     <script>
+       function close_window(id){
+         let e = document.getElementById(id).remove()
+       }
+    </script>
       <div id = "window" class = "ui-widget-content">
-         <div class="rightside"><button onClick="delete_element()">X</button></div>
+         <div id='closebutton' class="rightside"><button onClick="close_window('window')">X</button></div>
          <p>daydalia OS</p>
       </div>
    </body>
