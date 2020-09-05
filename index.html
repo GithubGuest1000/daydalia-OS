@@ -6,18 +6,8 @@
       <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
       <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
       <title>daydalia pre-alpha testing</title>
-      <style>
-         #window { width: 150px; height: 150px; padding: 0.5em; background:#eee;}
-         .rightside {
-           text-align: right; 
-         }
-      </style>
       
-      <script>
-         $(function() {
-            $( "#window" ).draggable();
-         });
-      </script>
+      
    </head>
    
    <body>
@@ -25,10 +15,26 @@
        function close_window(id){
          let e = document.getElementById(id).remove()
        }
-    </script>
-      <div id = "window" class = "ui-widget-content">
-         <div id='closebutton' class="rightside"><button onClick="close_window('window')">X</button></div>
-         <p>daydalia OS</p>
-      </div>
+       </script>
+    <div id="container">
+
+    </div>
+    <script>
+        let app;
+        function $window(name, width, height, code){
+          let element = document.createElement('div')
+          element.id = name
+          element.className = "ui-widget-content"
+          element.style.width = width.toString()+"px";
+          element.style.height = height.toString()+"px";
+          element.innerHTML = code
+          document.getElementById('container').appendChild(element)
+          $(function() {
+            $("#"+name).draggable().resizable();
+          });
+          
+        }
+        app = $window("simp", 150, 150, "this is a usseless website currently.Leave and comeback when this website is done")
+      </script>
    </body>
 </html>
