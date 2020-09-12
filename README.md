@@ -1,2 +1,2 @@
-# daydalia-OS
-<h1>CREATED BY A MORON WHO IS NOT DAYDALIA</h1>
+ daydalia-OS
+hello i am still bad at programming do not be mad at the ugly code pls<h1>OK?</h1>

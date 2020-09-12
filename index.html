@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
    <head>
       <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" 
@@ -6,38 +5,17 @@
       <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
       <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
       <title>daydalia pre-alpha testing</title>
-      <style>
-        .ui-widget-content{
-          background: #ffffff;
-        }
-      </style>
-   </head>
+      <link rel = "stylesheet" href="styling/style.css">
+    </head>
    
    <body>
-     <script>
-       function close_window(id){
-         let e = document.getElementById(id).remove()
-       }
-       </script>
-    <div id="container">
+     <script src="code/ui.js"></script>
+     <div id="container">
 
     </div>
     <script>
-        let app;
-        function $window(name, width, height, code){
-          let element = document.createElement('div')
-          element.id = name
-          element.className = "ui-widget-content"
-          element.style.width = width.toString()+"px";
-          element.style.height = height.toString()+"px";
-          element.innerHTML = code
-          document.getElementById('container').appendChild(element)
-          $(function() {
-            $("#"+name).draggable().resizable();
-          });
-          
-        }
-        app = $window("youareasimp", 150, 100, "this is a usseless website currently.Leave and comeback when this website is done")
-      </script>
+        app = $window("youareasimp", 150, 100, "this is a usseless website currently.Leave and comeback when this website is done", true)
+        
+    </script>
    </body>
 </html>
